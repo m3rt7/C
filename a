@@ -1,0 +1,30 @@
+int n, i, j, sayi = 0, sayi2 = 0;
+    printf("Matris boyutunu giriniz: ");
+    scanf("%d", &n);
+    int a[n][n];
+    printf("Matris elemanlarini giriniz:\n");
+    for(i = 0; i < n; i++)
+    {
+        for(j = 0; j < n; j++)
+        {
+            scanf("%d", &a[i][j]);
+            if(i == j)
+            {
+                sayi += a[i][j];
+            }
+            if(i + j == n - 1)
+            {
+                sayi2 += a[i][j];
+            }
+        }
+    }
+    if(sqrt(sayi) == (int)sqrt(sayi) && sqrt(sayi2) == (int)sqrt(sayi2))
+    {
+        printf("Toplam kare sayidir.\n");
+    }
+    else
+    {
+        printf("Toplam kare sayi degildir.\n");
+    }
+    return 0;
+}
